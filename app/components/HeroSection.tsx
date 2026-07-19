@@ -20,7 +20,7 @@ export default function HeroSection() {
             <div className="mb-6 flex items-center gap-4">
               <div className="h-1 w-24 bg-gradient-to-r from-[#902CB8] to-transparent"></div>
               <p className="text-2xl md:text-3xl lg:text-4xl font-light theme-text-secondary mb-2">
-                I&apos;m Muhammad Tayyab
+                I&apos;m Nawaf Ali
               </p>
             </div>
 
@@ -43,7 +43,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <FaBriefcase className="w-5 h-5 text-[#902CB8]" />
-                <span className="theme-text-secondary">2 Years Experience</span>
+                <span className="theme-text-secondary">1 Years Experience</span>
               </div>
             </div>
 
@@ -72,8 +72,8 @@ export default function HeroSection() {
             {/* Profile Image */}
             <div className="relative w-full max-w-md z-10 h-full">
               <Image
-                src="/profile.png"
-                alt="Muhammad Tayyab"
+                src="/profile1.png"
+                alt="Nawaf Ali"
                 fill
                 className="object-contain object-bottom"
                 priority
