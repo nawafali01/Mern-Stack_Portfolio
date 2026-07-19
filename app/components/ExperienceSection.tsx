@@ -59,14 +59,14 @@ export default function ExperienceSection() {
         {/* Timeline */}
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#902CB8] via-[#902CB8]/50 to-transparent md:transform md:-translate-x-1/2"></div>
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-600 via-blue-600/50 to-transparent md:transform md:-translate-x-1/2"></div>
 
           {/* Experience Items */}
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div key={exp.id} className="relative">
                 {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-8 w-6 h-6 bg-[#902CB8] rounded-full transform -translate-x-2.5 md:-translate-x-3 border-4 border-[var(--bg-primary)]"></div>
+                <div className="absolute left-0 md:left-1/2 top-8 w-6 h-6 bg-blue-600 rounded-full transform -translate-x-2.5 md:-translate-x-3 border-4 border-[var(--bg-primary)]"></div>
 
                 {/* Content */}
                 <div
@@ -77,8 +77,8 @@ export default function ExperienceSection() {
                   <div className="theme-card rounded-2xl p-6">
                     {/* Date */}
                     <div className="flex items-center gap-2 mb-3">
-                      <MdDateRange className="w-4 h-4 text-[#902CB8]" />
-                      <span className="text-sm text-[#902CB8] font-medium">
+                      <MdDateRange className="w-4 h-4 text-blue-600" />
+                      <span className="text-sm text-blue-600 font-medium">
                         {exp.dateRange}
                       </span>
                     </div>
@@ -89,7 +89,7 @@ export default function ExperienceSection() {
                     </h3>
 
                     {/* Company */}
-                    <p className="text-[#902CB8] font-semibold mb-3">
+                    <p className="text-blue-600 font-semibold mb-3">
                       {exp.company}
                     </p>
 
@@ -118,8 +118,8 @@ export default function ExperienceSection() {
       </div>
 
       {/* Background Effects */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-[#902CB8]/10 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#902CB8]/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl -z-10"></div>
     </section>
   );
 }

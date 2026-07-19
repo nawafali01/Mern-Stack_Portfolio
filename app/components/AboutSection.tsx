@@ -47,7 +47,7 @@ export default function AboutSection() {
             {/* Timeline Line */}
             <div className="relative flex flex-col items-center w-12">
               {/* Top line segment */}
-              <div className="w-1 h-24 bg-gradient-to-b from-[#902CB8] to-[#902CB8]"></div>
+              <div className="w-1 h-24 bg-gradient-to-b from-blue-600 to-blue-600"></div>
 
               {/* Timeline items with icons */}
               {services.map((service, index) => {
@@ -55,20 +55,20 @@ export default function AboutSection() {
                 return (
                   <div key={index} className="flex flex-col items-center w-full">
                     {/* Circle with icon */}
-                    <div className="w-12 h-12 rounded-full bg-[#902CB8] flex items-center justify-center border-4 border-[var(--bg-primary)] relative z-20 flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center border-4 border-[var(--bg-primary)] relative z-20 flex-shrink-0">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
 
                     {/* Line segment after circle (except last) */}
                     {index < services.length - 1 && (
-                      <div className="w-1 h-24 bg-gradient-to-b from-[#902CB8] to-[#902CB8]"></div>
+                      <div className="w-1 h-24 bg-gradient-to-b from-blue-600 to-blue-600"></div>
                     )}
                   </div>
                 );
               })}
 
               {/* Bottom line segment */}
-              <div className="w-1 h-24 bg-gradient-to-b from-[#902CB8] to-transparent"></div>
+              <div className="w-1 h-24 bg-gradient-to-b from-blue-600 to-transparent"></div>
             </div>
 
             {/* Service Cards */}
@@ -106,7 +106,7 @@ export default function AboutSection() {
                     <span className="text-4xl font-bold theme-text">
                       {stat.number}
                     </span>
-                    <span className="text-3xl text-[#902CB8] font-bold ml-1">
+                    <span className="text-3xl text-blue-600 font-bold ml-1">
                       {stat.symbol}
                     </span>
                   </div>

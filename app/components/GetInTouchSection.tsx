@@ -28,13 +28,12 @@ export default function GetInTouchSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      // Here you can add your form submission logic
       console.log("Form submitted:", formData);
       setSubmitMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
-      
+
       setTimeout(() => {
         setSubmitMessage("");
       }, 3000);
@@ -76,15 +75,15 @@ export default function GetInTouchSection() {
               {/* Email */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <MdEmail className="w-6 h-6 text-[#902CB8]" />
+                  <MdEmail className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <p className="theme-text font-medium">Email</p>
                   <a
-                    href="mailto:tayyabcode01@gmail.com"
-                    className="theme-text-secondary hover:text-[#902CB8] transition-colors"
+                    href="mailto:nawafalicode@gmail.com"
+                    className="theme-text-secondary hover:text-blue-600 transition-colors"
                   >
-                   tayyabcode01@gmail.com
+                    nawafalicode@gmail.com
                   </a>
                 </div>
               </div>
@@ -92,7 +91,7 @@ export default function GetInTouchSection() {
               {/* Location */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <MdLocationOn className="w-6 h-6 text-[#902CB8]" />
+                  <MdLocationOn className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <p className="theme-text font-medium">Location</p>
@@ -103,40 +102,40 @@ export default function GetInTouchSection() {
               {/* WhatsApp */}
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <FaWhatsapp className="w-6 h-6 text-[#902CB8]" />
+                  <FaWhatsapp className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <p className="theme-text font-medium">WhatsApp</p>
                   <a
-                    href="https://wa.me/923026633640"
+                    href="https://wa.me/923144664098"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="theme-text-secondary hover:text-[#902CB8] transition-colors"
+                    className="theme-text-secondary hover:text-blue-600 transition-colors"
                   >
-                    +92 302 6633640
+                    +92 3144664098
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="pt-8" style={{ borderTop: '1px solid var(--border-card)' }}>
+            <div className="pt-8" style={{ borderTop: "1px solid var(--border-card)" }}>
               <p className="theme-text-muted text-sm mb-4">Follow me on</p>
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/muhammadtayyabsandhu"
+                  href="https://github.com/nawafali01"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-[#902CB8] transition-all"
+                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all"
                   aria-label="GitHub"
                 >
                   <FaGithub className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/muhammad-tayyab-43a141284"
+                  href="https://www.linkedin.com/in/nawafali/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-[#902CB8] transition-all"
+                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin className="w-5 h-5" />
@@ -191,7 +190,7 @@ export default function GetInTouchSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#902CB8] hover:bg-[#7b25a0] text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
               >
                 <FaPaperPlane className="w-4 h-4" />
                 {isSubmitting ? "Sending..." : "Send Message"}
@@ -199,7 +198,7 @@ export default function GetInTouchSection() {
 
               {/* Success/Error Message */}
               {submitMessage && (
-                <p className="text-center text-sm text-[#902CB8]">
+                <p className="text-center text-sm text-blue-600">
                   {submitMessage}
                 </p>
               )}

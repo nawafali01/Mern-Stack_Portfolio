@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Tayyab | Full-Stack Developer",
+  title: "Nawaf Ali | Full-Stack Developer",
   description: "Full-Stack Developer portfolio — MERN Stack, Next.js, Webflow & WordPress",
 };
 

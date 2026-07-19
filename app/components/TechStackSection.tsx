@@ -65,7 +65,7 @@ export default function TechStackSection() {
                   key={index}
                   className="flex flex-col items-center justify-center gap-3 px-6 py-6 rounded-2xl theme-card transition-all duration-300 flex-shrink-0 w-50 h-26"
                 >
-                  <IconComponent className="w-10 h-10 text-[#902CB8]" />
+                  <IconComponent className="w-10 h-10 text-blue-600" />
                   <span className="theme-text font-medium text-center text-sm whitespace-normal">
                     {tech.name}
                   </span>

@@ -15,16 +15,16 @@ export default function Navbar() {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-t-secondary hover:text-[#902CB8] transition">
+            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
               Home
             </a>
-            <a href="#" className="text-t-secondary hover:text-[#902CB8] transition">
+            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
               About
             </a>
-            <a href="#" className="text-t-secondary hover:text-[#902CB8] transition">
+            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
               Services
             </a>
-            <a href="#" className="text-t-secondary hover:text-[#902CB8] transition">
+            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
               Contact
             </a>
 
@@ -37,7 +37,7 @@ export default function Navbar() {
               {theme === "dark" ? (
                 <FiSun className="w-[18px] h-[18px] text-amber-400" />
               ) : (
-                <FiMoon className="w-[18px] h-[18px] text-[#902CB8]" />
+                <FiMoon className="w-[18px] h-[18px] text-blue-600" />
               )}
             </button>
           </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
               {theme === "dark" ? (
                 <FiSun className="w-4 h-4 text-amber-400" />
               ) : (
-                <FiMoon className="w-4 h-4 text-[#902CB8]" />
+                <FiMoon className="w-4 h-4 text-blue-600" />
               )}
             </button>
 

@@ -6,9 +6,9 @@ export default function FloatingContact() {
   const contactLinks = [
     {
       icon: FaLinkedin,
-      url: "https://www.linkedin.com/in/nawaf-ali-43a141284",
+      url: "https://www.linkedin.com/in/nawafali/",
       label: "LinkedIn",
-      color: "hover:text-blue-500",
+      color: "hover:text-blue-600",
     },
     {
       icon: FaGithub,
@@ -49,7 +49,7 @@ export default function FloatingContact() {
       </div>
 
       {/* Floating Action Button */}
-      <div className="bg-gradient-to-r from-[#902CB8] to-[#a83ec4] rounded-full p-3 shadow-lg hover:shadow-xl hover:shadow-[#902CB8]/30 transition-all duration-300 cursor-pointer flex items-center justify-center">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full p-3 shadow-lg hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 cursor-pointer flex items-center justify-center">
         <svg
           className="w-6 h-6 text-white"
           fill="none"

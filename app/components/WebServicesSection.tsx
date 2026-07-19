@@ -409,7 +409,7 @@ export default function WebServicesSection() {
               "On-Time Delivery",
             ].map((item) => (
               <div key={item} className="flex items-center gap-3">
-                <FaCheckCircle className="w-4 h-4 text-[#902CB8] flex-shrink-0" />
+                <FaCheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span className="theme-text-secondary text-sm">{item}</span>
               </div>
             ))}

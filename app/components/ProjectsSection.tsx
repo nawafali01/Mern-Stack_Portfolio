@@ -96,7 +96,7 @@ export default function ProjectsSection() {
         {/* Section Header */}
         <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
-            <p className="text-[#902CB8] text-sm font-semibold tracking-widest uppercase mb-3">
+            <p className="text-blue-600 text-sm font-semibold tracking-widest uppercase mb-3">
               Portfolio
             </p>
             <h2 className="text-4xl sm:text-5xl font-bold theme-text">
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
               className="group relative theme-card rounded-2xl overflow-hidden"
             >
               {/* Top accent line — only visible on hover */}
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#902CB8] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-600 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
 
               {/* Project Image */}
               <div className="relative w-full h-60 overflow-hidden" style={{ background: 'var(--bg-card-inner)' }}>
@@ -190,10 +190,10 @@ export default function ProjectsSection() {
         {/* View All Button */}
         <div className="mt-14 text-center">
           <a
-            href="https://github.com/muhammadtayyabsandhu"
+            href="https://github.com/nawafali01"
             target="_blank"
             rel="noopener noreferrer"
-            className="group/btn inline-flex items-center gap-3 px-7 py-3.5 bg-[#902CB8] hover:bg-[#7b25a0] text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-[#902CB8]/20"
+            className="group/btn inline-flex items-center gap-3 px-7 py-3.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/20"
           >
             <FaGithub className="w-4.5 h-4.5" />
             View All Projects on GitHub
