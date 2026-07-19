@@ -11,7 +11,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-t-primary">Muhammad Tayyab</h1>
+            <h1 className="text-2xl font-bold text-t-primary">Nawaf Ali</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

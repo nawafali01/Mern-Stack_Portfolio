@@ -6,19 +6,19 @@ export default function FloatingContact() {
   const contactLinks = [
     {
       icon: FaLinkedin,
-      url: "https://www.linkedin.com/in/muhammad-tayyab-43a141284",
+      url: "https://www.linkedin.com/in/nawaf-ali-43a141284",
       label: "LinkedIn",
       color: "hover:text-blue-500",
     },
     {
       icon: FaGithub,
-      url: "https://github.com/muhammadtayyabsandhu",
+      url: "https://github.com/nawafali01",
       label: "GitHub",
       color: "hover:text-gray-300",
     },
     {
       icon: FaWhatsapp,
-      url: "https://wa.me/923026633640",
+      url: "https://wa.me/923144664098",
       label: "WhatsApp",
       color: "hover:text-green-500",
     },
