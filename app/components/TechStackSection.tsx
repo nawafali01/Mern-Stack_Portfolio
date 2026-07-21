@@ -8,8 +8,8 @@ import {
   SiJson,
   SiReactquery,
   SiZod,
-  SiWebflow,
   SiWordpress,
+  SiPostgresql,
 } from "react-icons/si";
 
 const scrollAnimation = `
@@ -42,8 +42,8 @@ export default function TechStackSection() {
     { icon: SiJson, name: "JWT Auth" },
     { icon: SiReactquery, name: "TanStack Query" },
     { icon: SiZod, name: "Zod" },
-    { icon: SiWebflow, name: "Webflow" },
     { icon: SiWordpress, name: "WordPress" },
+    { icon: SiPostgresql, name: "PostgreSQL" },
   ];
 
   // Triple array for seamless infinite scrolling loop

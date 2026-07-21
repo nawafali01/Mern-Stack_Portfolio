@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { SiReact, SiNodedotjs, SiNextdotjs, SiWebflow, SiWordpress } from "react-icons/si";
+import { SiReact, SiNodedotjs, SiNextdotjs, SiPostgresql, SiWordpress } from "react-icons/si";
 import { Code2 } from "lucide-react";
 import { MdLocationOn } from "react-icons/md";
 import { FaBriefcase } from "react-icons/fa";
@@ -65,7 +65,7 @@ export default function HeroSection() {
               <Code2 className="absolute top-26 right-12 w-24 h-24 opacity-30 text-blue-600" />
               <SiNodedotjs className="absolute bottom-38 left-10 w-20 h-20 opacity-10 text-blue-600 animate-pulse" />
               <SiNextdotjs className="absolute top-4 right-28 w-20 h-20 opacity-15 text-blue-600" />
-              <SiWebflow className="absolute bottom-18 right-4 w-28 h-18 opacity-15 text-blue-600" />
+              <SiPostgresql className="absolute bottom-18 right-4 w-28 h-18 opacity-15 text-blue-600" />
               <SiWordpress className="absolute top-100 left-1/4 w-20 h-20 opacity-15 text-blue-600" />
             </div>
 

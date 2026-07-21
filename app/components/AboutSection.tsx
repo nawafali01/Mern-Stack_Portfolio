@@ -93,7 +93,7 @@ export default function AboutSection() {
                 About me
               </h2>
               <p className="text-lg theme-text-secondary leading-relaxed">
-                My journey into software development began with a passion for creating meaningful digital experiences. Today, I specialize in building modern, high-performance web applications using Next.js, React, Node.js, MongoDB, Webflow, and WordPress. I enjoy turning complex ideas into simple, scalable, and user-friendly solutions that help businesses grow, improve customer experience, and achieve their goals. Every project I build is driven by clean code, thoughtful design, and a commitment to delivering real business value.
+              My journey into software development began with a passion for creating meaningful digital experiences. Today, I specialize in building modern, high-performance web applications using the MERN stack — MongoDB, Express.js, React, and Node.js — along with Next.js and PostgreSQL for scalable, production-ready solutions. I enjoy turning complex ideas into simple, scalable, and user-friendly applications that help businesses grow, improve customer experience, and achieve their goals. Every project I build is driven by clean code, thoughtful architecture, and a commitment to delivering real business value.
 
               </p>
             </div>

@@ -13,33 +13,26 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
+  
+  
   {
     id: 1,
-    dateRange: "Jun 2024 - Dec 2024",
-    title: "Frontend Developer Intern",
-    company: "IntelliWeb Solution",
+    dateRange: "Nov 2025 - Dec 2025",
+    title: "MERN Stack Developer Intern",
+    company: "GeekyTheory",
     description:
-      "Started my professional journey as a Frontend Developer Intern, where I built responsive and interactive web interfaces. Gained hands-on experience with modern frontend technologies and frameworks, developing pixel-perfect UI components and collaborating with design teams to deliver polished user experiences.",
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Vue.js", "Bootstrap", "Responsive Design"],
-  },
-  {
+      "During my internship at GeekyTheory, I gained hands-on experience in building full-stack web applications using the MERN stack. I worked on a variety of projects, including a social media platform and a e-commerce website. I also learned how to use RESTful APIs and how to deploy applications to the cloud.",
+    skills: ["Node.js", "Express.js", "MongoDB", "SQL", "PostgreSQL", "REST APIs", "MERN Stack"],
+  },{
     id: 2,
-    dateRange: "Jan 2025 - Jun 2025",
+    dateRange: "Jan 2026 - july 2026",
     title: "MERN Stack Developer Intern",
     company: "IIFA TECH",
     description:
       "Expanded my skill set into full-stack development during a 6-month intensive internship. Built complete backend systems with RESTful APIs, implemented database architectures, and developed end-to-end web applications. Worked extensively with both NoSQL and SQL databases, strengthening my backend expertise.",
     skills: ["Node.js", "Express.js", "MongoDB", "SQL", "PostgreSQL", "REST APIs", "MERN Stack"],
   },
-  {
-    id: 3,
-    dateRange: "Jun 2025 - Present",
-    title: "Full Stack Developer",
-    company: "Devencods",
-    description:
-      "Working as a Full Stack Developer handling diverse client projects from development to deployment. Building and shipping production-ready full-stack applications using the MERN stack and Next.js. Integrated AI-powered features into web applications to enhance user experience and automate workflows. Responsible for end-to-end project delivery including architecture design, frontend & backend development, database management, and deployment pipelines.",
-    skills: ["Next.js", "React.js", "Node.js", "MongoDB", "Express.js", "TypeScript", "PostgreSQL", "AI Integration", "Git", "Deployment"],
-  },
+ 
 ];
 
 export default function ExperienceSection() {
@@ -52,7 +45,7 @@ export default function ExperienceSection() {
             Experience
           </h2>
           <p className="theme-text-muted text-lg">
-            2 Years of professional experience building web applications.
+            1 Years of professional experience building web applications.
           </p>
         </div>
 
