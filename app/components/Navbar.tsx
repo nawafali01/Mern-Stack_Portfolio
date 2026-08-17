@@ -1,32 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
+    { name: "Projects", href: "#projects" },
+    { name: "Services", href: "#services" },
+    { name: "Contact", href: "#contact" },
+  ];
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-nav-bg backdrop-blur-xl border-b border-b-card">
+    <nav className="fixed top-0 z-50 w-full bg-nav-bg backdrop-blur-xl border-b border-b-card transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-t-primary">Nawaf Ali</h1>
+            <a href="#home" className="text-2xl font-bold text-t-primary hover:text-blue-600 transition-colors">
+              Nawaf Ali
+            </a>
           </div>
 
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
-              Home
-            </a>
-            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
-              About
-            </a>
-            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
-              Services
-            </a>
-            <a href="#" className="text-t-secondary hover:text-blue-600 transition">
-              Contact
-            </a>
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-t-secondary hover:text-blue-600 font-medium transition-colors cursor-pointer"
+              >
+                {link.name}
+              </a>
+            ))}
 
             {/* Theme Toggle */}
             <button
@@ -42,7 +53,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile */}
+          {/* Mobile Actions */}
           <div className="flex md:hidden items-center gap-3">
             <button
               onClick={toggleTheme}
@@ -56,15 +67,36 @@ export default function Navbar() {
               )}
             </button>
 
-            <button className="inline-flex items-center justify-center p-2 text-t-primary">
-              <span className="sr-only">Open menu</span>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2 text-t-primary rounded-lg hover:bg-c-bg transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <FiX className="w-6 h-6" />
+              ) : (
+                <FiMenu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-nav-bg border-b border-b-card backdrop-blur-xl px-4 pt-2 pb-4 space-y-2 shadow-xl">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-lg text-t-secondary hover:text-blue-600 hover:bg-c-bg font-medium transition-colors"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

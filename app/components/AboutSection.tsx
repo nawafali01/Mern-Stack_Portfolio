@@ -38,7 +38,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-start theme-section-1">
+    <section id="about" className="relative w-full min-h-screen flex items-center justify-start theme-section-1">
       {/* Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

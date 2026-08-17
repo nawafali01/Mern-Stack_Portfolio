@@ -6,7 +6,7 @@ import { FaBriefcase } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center lg:items-end justify-center theme-section-1">
+    <section id="home" className="relative w-full min-h-screen flex items-center lg:items-end justify-center theme-section-1">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-0 pt-8 lg:pt-16 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center lg:items-end w-full">
           {/* Left Content */}
@@ -48,12 +48,18 @@ export default function HeroSection() {
             </div>
 
             <div className="flex gap-4 items-start">
-              <button className="px-6 py-3 bg-blue-600 text-white rounded font-medium hover:bg-blue-700 transition whitespace-nowrap">
+              <a
+                href="#contact"
+                className="px-6 py-3 bg-blue-600 text-white rounded font-medium hover:bg-blue-700 transition whitespace-nowrap inline-block text-center cursor-pointer"
+              >
                 Got a project?
-              </button>
-              <button className="px-6 py-3 border-2 border-blue-600 theme-text rounded font-medium hover:bg-blue-600 hover:text-white transition whitespace-nowrap">
-                My resume
-              </button>
+              </a>
+              <a
+                href="#projects"
+                className="px-6 py-3 border-2 border-blue-600 theme-text rounded font-medium hover:bg-blue-600 hover:text-white transition whitespace-nowrap inline-block text-center cursor-pointer"
+              >
+                My projects
+              </a>
             </div>
           </div>
 
@@ -65,19 +71,20 @@ export default function HeroSection() {
               <Code2 className="absolute top-26 right-12 w-24 h-24 opacity-30 text-blue-600" />
               <SiNodedotjs className="absolute bottom-38 left-10 w-20 h-20 opacity-10 text-blue-600 animate-pulse" />
               <SiNextdotjs className="absolute top-4 right-28 w-20 h-20 opacity-15 text-blue-600" />
-              <SiPostgresql className="absolute bottom-18 right-4 w-28 h-18 opacity-15 text-blue-600" />
+              <SiPostgresql className="absolute bottom-18 right-4 w-28 h-18 opacity-20 text-blue-600" />
               <SiWordpress className="absolute top-100 left-1/4 w-20 h-20 opacity-15 text-blue-600" />
             </div>
 
             {/* Profile Image */}
-            <div className="relative w-full max-w-md z-10 h-full">
+            <div className="relative w-full max-w-lg lg:max-w-xl z-10 h-[430px] sm:h-[490px] lg:h-[550px] overflow-hidden flex items-end justify-center">
               <Image
-                src="/profile1.png"
+                src="/nawafali-hero.png"
                 alt="Nawaf Ali"
                 fill
-                className="object-contain object-bottom"
+                unoptimized
+                className="object-cover object-[center_top] scale-135 lg:scale-145 origin-[center_top]"
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
               />
             </div>
           </div>

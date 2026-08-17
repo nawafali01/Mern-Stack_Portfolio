@@ -107,7 +107,7 @@ function ProjectImage({ src, alt }: { src: string; alt: string }) {
 
 export default function ProjectsSection() {
   return (
-    <section className="relative w-full py-24 theme-section-3 overflow-hidden">
+    <section id="projects" className="relative w-full py-24 theme-section-3 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-14 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">

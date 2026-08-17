@@ -13,31 +13,38 @@ interface ExperienceItem {
 }
 
 const experiences: ExperienceItem[] = [
-  
-  
   {
     id: 1,
     dateRange: "Nov 2025 - Dec 2025",
     title: "MERN Stack Developer Intern",
     company: "GeekyTheory",
     description:
-      "During my internship at GeekyTheory, I gained hands-on experience in building full-stack web applications using the MERN stack. I worked on a variety of projects, including a social media platform and a e-commerce website. I also learned how to use RESTful APIs and how to deploy applications to the cloud.",
-    skills: ["Node.js", "Express.js", "MongoDB", "SQL", "PostgreSQL", "REST APIs", "MERN Stack"],
-  },{
-    id: 2,
-    dateRange: "Jan 2026 - july 2026",
-    title: "MERN Stack Developer Intern",
-    company: "IIFA TECH",
-    description:
-      "Expanded my skill set into full-stack development during a 6-month intensive internship. Built complete backend systems with RESTful APIs, implemented database architectures, and developed end-to-end web applications. Worked extensively with both NoSQL and SQL databases, strengthening my backend expertise.",
+      "During my internship at GeekyTheory, I gained hands-on experience in building full-stack web applications using the MERN stack. I worked on a variety of projects, including a social media platform and an e-commerce website. I also learned how to use RESTful APIs and how to deploy applications to the cloud.",
     skills: ["Node.js", "Express.js", "MongoDB", "SQL", "PostgreSQL", "REST APIs", "MERN Stack"],
   },
- 
+  {
+    id: 2,
+    dateRange: "Jan 2026 - Apr 2026",
+    title: "MERN Stack Developer Intern",
+    company: "IIFA Tech",
+    description:
+      "Built and enhanced full-stack web application features using React.js, Node.js, Express.js, and MongoDB. Developed reusable React.js components with Tailwind CSS, created and integrated RESTful APIs, designed MongoDB schemas, and implemented CRUD operations.",
+    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "RESTful APIs", "MERN Stack"],
+  },
+  {
+    id: 3,
+    dateRange: "Apr 2026 - Present",
+    title: "MERN Stack Developer — Live Projects",
+    company: "IIFA Tech",
+    description:
+      "Working on live production projects, developing and maintaining full-stack web applications using the MERN stack. Developing responsive and reusable UI components with React.js & Tailwind CSS, implementing RESTful APIs with Node.js/Express.js & MongoDB, and building authentication, authorization, and role-based access control.",
+    skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "RESTful APIs", "JWT Auth", "RBAC", "MERN Stack"],
+  },
 ];
 
 export default function ExperienceSection() {
   return (
-    <section className="relative w-full py-20 theme-section-2 overflow-hidden">
+    <section id="experience" className="relative w-full py-20 theme-section-2 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16">

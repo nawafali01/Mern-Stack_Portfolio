@@ -18,7 +18,7 @@ export default function FloatingContact() {
     },
     {
       icon: FaWhatsapp,
-      url: "https://wa.me/923144664098",
+      url: "https://wa.me/923153181236",
       label: "WhatsApp",
       color: "hover:text-green-500",
     },
@@ -49,7 +49,11 @@ export default function FloatingContact() {
       </div>
 
       {/* Floating Action Button */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full p-3 shadow-lg hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 cursor-pointer flex items-center justify-center">
+      <a
+        href="#contact"
+        aria-label="Contact Section"
+        className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full p-3 shadow-lg hover:shadow-xl hover:shadow-blue-600/30 transition-all duration-300 cursor-pointer flex items-center justify-center hover:scale-105"
+      >
         <svg
           className="w-6 h-6 text-white"
           fill="none"
@@ -63,7 +67,7 @@ export default function FloatingContact() {
             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
           />
         </svg>
-      </div>
+      </a>
     </div>
   );
 }

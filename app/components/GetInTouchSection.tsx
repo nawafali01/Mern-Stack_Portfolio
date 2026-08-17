@@ -13,7 +13,10 @@ export default function GetInTouchSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState("");
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | "";
+    message: string;
+  }>({ type: "", message: "" });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -28,24 +31,55 @@ export default function GetInTouchSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setStatus({ type: "", message: "" });
 
     try {
-      console.log("Form submitted:", formData);
-      setSubmitMessage("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b761b59b-ba06-4476-9f9d-4ea281048247",
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          from_name: "Portfolio Contact Form",
+          subject: `New Contact Form Message from ${formData.name}`,
+        }),
+      });
 
-      setTimeout(() => {
-        setSubmitMessage("");
-      }, 3000);
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus({
+          type: "error",
+          message: result.message || "Failed to send message. Please try again.",
+        });
+      }
     } catch (error) {
-      setSubmitMessage("Failed to send message. Please try again.");
+      console.error("Web3Forms submission error:", error);
+      setStatus({
+        type: "error",
+        message: "An error occurred while sending your message. Please try again later.",
+      });
     } finally {
       setIsSubmitting(false);
+      setTimeout(() => {
+        setStatus({ type: "", message: "" });
+      }, 6000);
     }
   };
 
   return (
-    <section className="relative w-full py-20 theme-section-2 overflow-hidden">
+    <section id="contact" className="relative w-full py-20 theme-section-2 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -107,12 +141,12 @@ export default function GetInTouchSection() {
                 <div>
                   <p className="theme-text font-medium">WhatsApp</p>
                   <a
-                    href="https://wa.me/923144664098"
+                    href="https://wa.me/923153181236"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="theme-text-secondary hover:text-blue-600 transition-colors"
                   >
-                    +92 3144664098
+                    +92 3153181236
                   </a>
                 </div>
               </div>
@@ -190,17 +224,23 @@ export default function GetInTouchSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-blue-600/20"
               >
-                <FaPaperPlane className="w-4 h-4" />
+                <FaPaperPlane className={`w-4 h-4 ${isSubmitting ? "animate-pulse" : ""}`} />
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
 
               {/* Success/Error Message */}
-              {submitMessage && (
-                <p className="text-center text-sm text-blue-600">
-                  {submitMessage}
-                </p>
+              {status.message && (
+                <div
+                  className={`text-center text-sm p-3 rounded-lg border transition-all ${
+                    status.type === "success"
+                      ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-600 dark:text-emerald-400"
+                      : "bg-rose-500/10 border-rose-500/30 text-rose-600 dark:text-rose-400"
+                  }`}
+                >
+                  {status.message}
+                </div>
               )}
             </form>
           </div>

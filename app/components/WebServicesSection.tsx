@@ -2,19 +2,15 @@
 
 import { useState } from "react";
 import {
-  SiWebflow,
   SiWordpress,
-  SiMongodb,
   SiReact,
   SiVuedotjs,
   SiNextdotjs,
 } from "react-icons/si";
 import {
-  FaPaintBrush,
   FaShoppingCart,
   FaRocket,
   FaMobileAlt,
-  FaSearch,
   FaCogs,
   FaPlug,
   FaPalette,
@@ -157,42 +153,6 @@ const platforms: ServicePlatform[] = [
     ],
   },
   {
-    id: "webflow",
-    name: "Webflow",
-    icon: SiWebflow,
-    tagline: "Pixel-Perfect, No-Code Websites",
-    description:
-      "I design and develop stunning, responsive websites on Webflow — fully custom, visually polished, and optimized for performance. From landing pages to complex multi-page sites, I bring your vision to life with clean interactions and animations.",
-    gradient: "from-[#4353FF] to-[#146EF5]",
-    features: [
-      {
-        icon: FaPaintBrush,
-        title: "Custom Design",
-        description: "Unique, pixel-perfect layouts tailored to your brand identity",
-      },
-      {
-        icon: FaRocket,
-        title: "Animations & Interactions",
-        description: "Smooth scroll-based animations and micro-interactions",
-      },
-      {
-        icon: FaMobileAlt,
-        title: "Fully Responsive",
-        description: "Flawless experience across all devices and screen sizes",
-      },
-      {
-        icon: FaSearch,
-        title: "SEO Optimized",
-        description: "Built with clean structure and SEO best practices",
-      },
-    ],
-    stats: [
-      { label: "Projects Delivered", value: "15+" },
-      { label: "Client Satisfaction", value: "100%" },
-      { label: "Avg. Delivery", value: "5 Days" },
-    ],
-  },
-  {
     id: "wordpress",
     name: "WordPress",
     icon: SiWordpress,
@@ -267,7 +227,7 @@ export default function WebServicesSection() {
 
   return (
     <section
-      id="web-services"
+      id="services"
       className="relative w-full py-20 theme-section-1 overflow-hidden"
     >
       <style>{sectionAnimation}</style>
