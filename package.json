@@ -1,5 +1,5 @@
 {
-  "name": "muhammad-tayyab",
+  "name": "nawaf-ali",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "framer-motion": "^13.1.0",
     "lucide-react": "^1.18.0",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-icons": "^5.6.0"
+    "react-icons": "^5.6.0",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

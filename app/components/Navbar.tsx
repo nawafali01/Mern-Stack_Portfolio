@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
-import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX, FiDownload } from "react-icons/fi";
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -28,7 +28,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -38,6 +38,16 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+
+            {/* Download CV Button */}
+            <a
+              href="/Nawaf_ali_cv.pdf"
+              download="Nawaf_Ali_CV.pdf"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-xl shadow-sm transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <FiDownload className="w-4 h-4" />
+              <span>Download CV</span>
+            </a>
 
             {/* Theme Toggle */}
             <button
@@ -54,7 +64,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Actions */}
-          <div className="flex md:hidden items-center gap-3">
+          <div className="flex md:hidden items-center gap-2">
+            <a
+              href="/Nawaf_ali_cv.pdf"
+              download="Nawaf_Ali_CV.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors cursor-pointer"
+            >
+              <FiDownload className="w-3.5 h-3.5" />
+              <span>CV</span>
+            </a>
+
             <button
               onClick={toggleTheme}
               className="w-9 h-9 rounded-lg bg-c-bg border border-b-card flex items-center justify-center cursor-pointer"
@@ -95,6 +114,17 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <div className="pt-2 border-t border-b-card">
+            <a
+              href="/Nawaf_ali_cv.pdf"
+              download="Nawaf_Ali_CV.pdf"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors cursor-pointer"
+            >
+              <FiDownload className="w-4 h-4" />
+              <span>Download CV</span>
+            </a>
+          </div>
         </div>
       )}
     </nav>

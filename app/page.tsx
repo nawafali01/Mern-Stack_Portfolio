@@ -9,6 +9,7 @@ import WorkProcessSection from "./components/WorkProcessSection";
 import GetInTouchSection from "./components/GetInTouchSection";
 import FooterSection from "./components/FooterSection";
 import FloatingContact from "./components/FloatingContact";
+import ChatWidget from "./components/chat/ChatWidget";
 
 export default function Home() {
   return (
@@ -21,12 +22,16 @@ export default function Home() {
       <ProjectsSection />
       <WebServicesSection />
       <WorkProcessSection />
-       {/* Skills Scroll Bar */}
-      <div className="absolute bottom-0 w-full">
-      </div>
+      {/* Skills Scroll Bar */}
+      <div className="absolute bottom-0 w-full"></div>
       <GetInTouchSection />
       <FooterSection />
+      
+      {/* Original Floating Social & Contact Actions */}
       <FloatingContact />
+
+      {/* Floating Real-Time Interactive AI Chat Widget */}
+      <ChatWidget />
     </div>
   );
 }

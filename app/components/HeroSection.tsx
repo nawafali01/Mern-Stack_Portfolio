@@ -3,6 +3,7 @@ import { SiReact, SiNodedotjs, SiNextdotjs, SiPostgresql, SiWordpress } from "re
 import { Code2 } from "lucide-react";
 import { MdLocationOn } from "react-icons/md";
 import { FaBriefcase } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 
 export default function HeroSection() {
   return (
@@ -25,9 +26,9 @@ export default function HeroSection() {
             </div>
 
             <div className="mb-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold theme-text">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold theme-text">
                 Full-Stack Developer
-              </h2>
+              </h1>
             </div>
             <div className="mb-8">
               <p className="text-lg theme-text-secondary">
@@ -43,11 +44,11 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center gap-2">
                 <FaBriefcase className="w-5 h-5 text-blue-600" />
-                <span className="theme-text-secondary">1 Years Experience</span>
+                <span className="theme-text-secondary">1+ Years Experience</span>
               </div>
             </div>
 
-            <div className="flex gap-4 items-start">
+            <div className="flex gap-4 items-center flex-wrap">
               <a
                 href="#contact"
                 className="px-6 py-3 bg-blue-600 text-white rounded font-medium hover:bg-blue-700 transition whitespace-nowrap inline-block text-center cursor-pointer"
@@ -59,6 +60,14 @@ export default function HeroSection() {
                 className="px-6 py-3 border-2 border-blue-600 theme-text rounded font-medium hover:bg-blue-600 hover:text-white transition whitespace-nowrap inline-block text-center cursor-pointer"
               >
                 My projects
+              </a>
+              <a
+                href="/Nawaf_ali_cv.pdf"
+                download="Nawaf_Ali_CV.pdf"
+                className="px-5 py-3 border border-b-card bg-c-bg hover:border-blue-600 text-t-primary hover:text-blue-600 rounded font-medium transition whitespace-nowrap inline-flex items-center gap-2 text-center cursor-pointer shadow-sm"
+              >
+                <FiDownload className="w-4 h-4" />
+                <span>Download CV</span>
               </a>
             </div>
           </div>
@@ -79,7 +88,7 @@ export default function HeroSection() {
             <div className="relative w-full max-w-lg lg:max-w-xl z-10 h-[430px] sm:h-[490px] lg:h-[550px] overflow-hidden flex items-end justify-center">
               <Image
                 src="/nawafali-hero.png"
-                alt="Nawaf Ali"
+                alt="Nawaf Ali - Full-Stack Developer"
                 fill
                 unoptimized
                 className="object-cover object-[center_top] scale-135 lg:scale-145 origin-[center_top]"

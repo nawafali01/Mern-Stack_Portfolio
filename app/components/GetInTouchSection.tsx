@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { MdEmail } from "react-icons/md";
-import { MdLocationOn } from "react-icons/md";
+import { MdEmail, MdLocationOn } from "react-icons/md";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaPaperPlane } from "react-icons/fa";
+import { Sparkles, MessageCircle } from "lucide-react";
+import { useChatStore } from "@/app/store/useChatStore";
 
 export default function GetInTouchSection() {
+  const { setOpen, setActiveTab } = useChatStore();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -78,6 +80,11 @@ export default function GetInTouchSection() {
     }
   };
 
+  const handleOpenLiveChat = (tab: "ai" | "dm") => {
+    setActiveTab(tab);
+    setOpen(true);
+  };
+
   return (
     <section id="contact" className="relative w-full py-20 theme-section-2 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,9 +93,27 @@ export default function GetInTouchSection() {
           <h2 className="text-4xl sm:text-5xl font-bold theme-text mb-4">
             Get In Touch
           </h2>
-          <p className="theme-text-muted text-lg">
-            Have a project in mind or want to collaborate? Feel free to reach out!
+          <p className="theme-text-muted text-lg max-w-2xl mx-auto">
+            Have a project in mind, need full-stack development, or want to collaborate? Reach out via form or start a real-time conversation below!
           </p>
+
+          {/* Quick Chat Triggers */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+            <button
+              onClick={() => handleOpenLiveChat("ai")}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600/10 hover:bg-blue-600/20 text-blue-600 dark:text-blue-400 border border-blue-600/30 text-xs font-semibold transition-all hover:scale-105 cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              Ask AI Portfolio Assistant
+            </button>
+            <button
+              onClick={() => handleOpenLiveChat("dm")}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-200 dark:bg-zinc-800 hover:bg-slate-300 dark:hover:bg-zinc-700 text-slate-800 dark:text-zinc-200 border border-slate-300 dark:border-zinc-700 text-xs font-semibold transition-all hover:scale-105 cursor-pointer"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              Open Live Direct Message
+            </button>
+          </div>
         </div>
 
         {/* Main Content Grid */}
@@ -96,11 +121,11 @@ export default function GetInTouchSection() {
           {/* Left Side - Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold theme-text mb-8">
+              <h3 className="text-2xl font-bold theme-text mb-4">
                 Let&apos;s work together
               </h3>
-              <p className="theme-text-muted text-base leading-relaxed mb-8">
-                I&apos;m open to projects, freelance work, and collaborations.
+              <p className="theme-text-muted text-base leading-relaxed">
+                I&apos;m open to new projects, freelance contracts, and software engineering opportunities.
               </p>
             </div>
 
@@ -146,7 +171,7 @@ export default function GetInTouchSection() {
                     rel="noopener noreferrer"
                     className="theme-text-secondary hover:text-blue-600 transition-colors"
                   >
-                    +92 3153181236
+                    +92 315 3181236
                   </a>
                 </div>
               </div>
@@ -160,7 +185,7 @@ export default function GetInTouchSection() {
                   href="https://github.com/nawafali01"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all"
+                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all hover:scale-105"
                   aria-label="GitHub"
                 >
                   <FaGithub className="w-5 h-5" />
@@ -169,7 +194,7 @@ export default function GetInTouchSection() {
                   href="https://www.linkedin.com/in/nawafali/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all"
+                  className="w-10 h-10 rounded-xl theme-card flex items-center justify-center theme-text-muted hover:text-blue-600 transition-all hover:scale-105"
                   aria-label="LinkedIn"
                 >
                   <FaLinkedin className="w-5 h-5" />
@@ -224,7 +249,7 @@ export default function GetInTouchSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-blue-600/20"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer shadow-lg shadow-blue-600/20 active:scale-98"
               >
                 <FaPaperPlane className={`w-4 h-4 ${isSubmitting ? "animate-pulse" : ""}`} />
                 {isSubmitting ? "Sending..." : "Send Message"}
