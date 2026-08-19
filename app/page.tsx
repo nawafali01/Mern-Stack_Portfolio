@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import TechStackSection from "./components/TechStackSection";
 import AboutSection from "./components/AboutSection";
 import ExperienceSection from "./components/ExperienceSection";
+import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import WebServicesSection from "./components/WebServicesSection";
 import WorkProcessSection from "./components/WorkProcessSection";
@@ -19,6 +20,7 @@ export default function Home() {
       <TechStackSection />
       <AboutSection />
       <ExperienceSection />
+      <SkillsSection />
       <ProjectsSection />
       <WebServicesSection />
       <WorkProcessSection />

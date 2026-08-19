@@ -81,7 +81,6 @@ export const portfolioData: PortfolioData = {
       category: "Tools & Workflow",
       skills: [
         { name: "Git / GitHub", level: "Advanced" },
-        { name: "Docker", level: "Basics" },
         { name: "Vercel / Netlify", level: "Advanced" },
         { name: "WordPress", level: "Advanced" },
         { name: "Figma to Code", level: "Expert" },
