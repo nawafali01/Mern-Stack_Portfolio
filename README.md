@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nawaf Ali — Full-Stack Developer Portfolio
 
-## Getting Started
+A modern, responsive, and interactive personal portfolio showcasing full-stack web development expertise across MERN Stack, Next.js, React, Node.js, and modern UI engineering.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo & Repository
+- **Repository**: [https://github.com/nawafali01/Mern-Stack_Portfolio](https://github.com/nawafali01/Mern-Stack_Portfolio)
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
+- **UI & Styling**: [React 19](https://react.dev/), [Tailwind CSS v4](https://tailwindcss.com/), [Framer Motion](https://www.framer.com/motion/)
+- **Icons & Visuals**: [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## ✨ Features
+
+- ⚡ **Dynamic Modern UI**: Smooth scrolling, glassmorphic themes, and rich animations powered by Framer Motion.
+- 🌓 **Dark & Light Mode**: Theme switching with persistent context.
+- 💬 **Interactive AI & DM Chat Widget**: Real-time messaging experience integrated for direct reach.
+- 💼 **Showcases**: Highlights featured projects, full-stack experience, skill proficiencies, and web service offerings.
+- 📱 **Fully Responsive**: Optimized for ultra-wide screens, laptops, tablets, and mobile devices.
+
+---
+
+## 🏁 Getting Started
+
+### Prerequisites
+Make sure you have Node.js (v18 or newer) installed.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nawafali01/Mern-Stack_Portfolio.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd Nawaf-Ali
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## 📦 Build & Deployment
+
+To generate an optimized production build:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📬 Contact & Connect
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Author**: Nawaf Ali
+- **GitHub**: [@nawafali01](https://github.com/nawafali01)
+- **Email**: nawafali3435@gmail.com
