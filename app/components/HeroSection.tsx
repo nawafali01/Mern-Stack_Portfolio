@@ -33,7 +33,7 @@ export default function HeroSection() {
             <div className="mb-8">
               <p className="text-lg theme-text-secondary">
                 I build scalable web applications and high-converting websites
-                that help businesses grow and succeed online.
+                that help businesses grow and succeed online. Let&apos;s build something great together.
               </p>
             </div>
 
